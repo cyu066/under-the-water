@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>findfish</title>
+    <style>
+        @font-face {
+			font-family: "Editorial Old";
+			src: url('PPEditorialOld-Regular.otf');		
+        }
+        * {font-family:"Editorial Old"; box-sizing: border-box; margin:0px;}
+        h1 {
+			text-align: center;
+            padding:30px;
+			margin-bottom: 20px;
+        }
+        .container {
+			display: grid;
+			grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
+			gap: 100px;
+            position: absolute;
+            top: 100px;
+            width: 100vw;
+            padding: 40px;
+            padding-top: 0px; 
+            height: 100vh;
+		}
+        .bubble {
+            width: 100%;
+            aspect-ratio: 1/1;
+            background-image: linear-gradient(to bottom right,white, cornflowerblue);
+            border-radius: 50%;
+            transition: 0.8s;
+        }
+        .bubble:hover {
+            opacity: 0%;
+         }
+        .text {
+            color:white;
+            font-size: 20px;
+            border-radius: 50%;
+            width: 100%;
+            aspect-ratio: 1/1;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+        .bubbleanimation {
+            animation-name: move;
+            animation-duration: 3s;
+            animation-iteration-count: infinite;
+            animation-timing-function: ease-in-out;
+        }
+        img {
+            width: 60%;
+        }
+        @keyframes move {
+			0% { transform: translate(0,  0px); }
+			50%   { transform: translate(0px, 20px); }    
+			100%   { transform: translate(0, 0px); }    
+		}
+    </style>
+</head>
+<body style="background-color:cornflowerblue;">
+    <h1 style="color:white; font-size: 65px;">Find the Fish</h1>
+    <div class="container" style="z-index: 9;">
+<div class="bubble bubbleanimation"></div>
+<div></div>
+<div></div>
+<div class="bubble bubbleanimation"></div>
+<div></div>
+<div class="bubble bubbleanimation"></div>
+<div></div>
+<div class="bubble bubbleanimation"></div>
+<div class="bubble bubbleanimation"></div>
+<div></div>
+<div></div>
+<div class="bubble bubbleanimation"></div>
+<div ></div>
+<div ></div>
+<div class="bubble bubbleanimation"></div>
+    </div>
+    <div class="container">
+        <div class="text bubbleanimation">not this</div>
+        <div></div>
+        <div></div>
+        <div class="text bubbleanimation">not this</div>
+        <div></div>
+        <div class="text bubbleanimation">not this</div>
+        <div></div>
+        <div class="text bubbleanimation">not this</div>
+        <div class="text bubbleanimation"><img src="https://cdn-icons-png.flaticon.com/512/411/411041.png"></div>
+        <div></div>
+        <div></div>
+        <div class="text bubbleanimation">not this</div>
+        <div></div>
+        <div></div>
+        <div class="text bubbleanimation">not this</div>
+    </div>
+</body>
+</html>
